@@ -1,0 +1,66 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Supplier",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Supplier",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ISS FACILITY SERVICES LTD FCO OP - POE",
+          "ISS FACILITY SERVICES LTD FCO OP"
+        ],
+        "to": "ISS FACILITY SERVICES LTD"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "G4S SECURITY SERVICE DRC SPRL",
+          "G4S SECURITY SERVICES"
+        ],
+        "to": "G4S SECURITY SERVICES"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Transaction Number using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Transaction Number",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Account Description",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Account Description",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bank Charges (Oracle Cash Management Control Account), Electricity Non-Residential, Electricity Residential, Gas Non-Residential, Gas Residential, Property Maintenance Overseas Non Residential, Property Maintenance Overseas Residential, Rental Payments - non residential, Rental Payments - residential, Telephone Call Charges, Water Non-Residential, Water Residential",
+          "Bank Charges (Oracle Cash Management Control Account), Electricity Non-Residential, Electricity Residential, Gas Residential, Property Maintenance Overseas Non Residential, Rental Payments - residential, Telephone Call Charges, Water Residential"
+        ],
+        "to": "Bank Charges (Oracle Cash Management Control Account), Electricity Non-Residential, Electricity Residential, Gas Non-Residential, Gas Residential, Property Maintenance Overseas Non Residential, Property Maintenance Overseas Residential, Rental Payments - non residential, Rental Payments - residential, Telephone Call Charges, Water Non-Residential, Water Residential"
+      }
+    ]
+  }
+]
