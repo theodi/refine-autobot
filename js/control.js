@@ -13,9 +13,9 @@ $(document).ready(function() {
 
 function registerListeners() {
 	$( "#submit" ).click(function() {
+	        url = $( "#url").val();
 		if (requested_url != url) {
 			requested_url = url;
-	                url = $( "#url").val();
 	                changes = $( "#changes").val();
 	                getDataForURL(url,changes);
 		}
