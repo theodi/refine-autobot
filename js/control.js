@@ -25,7 +25,7 @@ function registerListeners() {
 function getDataForURL(url,changes) {
 	$.ajax({
             type : 'POST',
-            url : 'http://odinprac.theodi.org/refine-autobot/getClean.php',           
+            url : 'http://refine-autoclean.herokuapp.com/getClean.php',           
             data: {
                 url: url,
                 changes: changes
